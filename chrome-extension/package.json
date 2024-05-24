@@ -1,7 +1,7 @@
 {
   "name": "quickfill",
   "version": "1.0.0",
-  "description": "convient way to copy things",
+  "description": "QuickFill simplifies the process of filling out online forms, making it faster and more efficient. Say goodbye to repetitive typing and hello to QuickFill!",
   "scripts": {
     "clean": "rimraf ../../dist && rimraf .turbo",
     "build": "tsc --noEmit && vite build",
