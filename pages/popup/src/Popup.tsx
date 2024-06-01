@@ -49,7 +49,16 @@ const Popup = () => {
           </label>
         </div>
       </div>
-      <div className="rounded-xl shadow border-bbBlackWhite border-[1px] p-3 space-y-2"></div>
+      <div className="text-sm">
+        Found any bugs or have any suggestions?{" "}
+        <a
+          href="https://github.com/sanyamjain036/quickfill/issues"
+          target="_blank"
+          className="underline"
+        >
+          GitHub
+        </a>
+      </div>
     </div>
   );
 };

@@ -27,19 +27,12 @@ const manifest = {
   // },
   action: {
     default_popup: "popup/index.html",
-    default_icon: {
-      16: "icon-128.png",
-      48: "icon-128.png",
-      128: "icon-128.png",
-    },
+    default_icon: "icon-128.png",
   },
   // chrome_url_overrides: {
   //   newtab: "newtab/index.html",
   // },
   icons: {
-    16: "icon-128.png",
-    32: "icon-128.png",
-    48: "icon-128.png",
     128: "icon-128.png",
   },
   content_scripts: [
