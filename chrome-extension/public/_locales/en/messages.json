@@ -1,10 +1,10 @@
 {
   "extensionDescription": {
-    "description": "Extension description",
-    "message": "Chrome extension boilerplate developed with Vite, React and Typescript"
+    "description": "QuickFill simplifies the process of filling out online forms.",
+    "message": "Say goodbye to repetitive typing and hello to QuickFill!"
   },
   "extensionName": {
-    "description": "Extension name",
-    "message": "Chrome extension boilerplate"
+    "description": "QuickFill",
+    "message": "Your Ultimate Form Autofiller"
   }
 }

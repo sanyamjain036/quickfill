@@ -18,8 +18,8 @@ elements.forEach((element) => {
 document.addEventListener("click", handleClick);
 
 // Add event listener for custom "clickedQuestion" event
-window.addEventListener("clickedQuestion", (e: CustomEvent) => {
-  handleCustomEvent(e);
+window.addEventListener("clickedQuestion", (e: Event) => {
+  handleCustomEvent(e as CustomEvent);
 });
 
 // CALLBACK FUNCTIONS
@@ -29,9 +29,7 @@ async function handleFocus(element: Element) {
   const res = await switchStorage.get();
   if (res === "off") return;
   updatePopupPosition(element);
-  const popupContainer = document.querySelector(
-    "#poppy-popup-container"
-  )!;
+  const popupContainer = document.querySelector("#poppy-popup-container")!;
   const popupShadowRoot =
     popupContainer.shadowRoot!.querySelector("#shadow-root");
   const popup = popupShadowRoot!.querySelector<HTMLElement>("#poppy-popup")!;
@@ -44,22 +42,18 @@ async function handleFocus(element: Element) {
 // Function to update the position of the popup
 function updatePopupPosition(element: Element) {
   const rect = element.getBoundingClientRect();
-  const popupContainer = document.querySelector(
-    "#poppy-popup-container"
-  )!;
+  const popupContainer = document.querySelector("#poppy-popup-container")!;
   const popupShadowRoot =
     popupContainer.shadowRoot!.querySelector("#shadow-root");
   const popup = popupShadowRoot!.querySelector<HTMLElement>("#poppy-popup")!;
 
-  popup.style.top = `${rect.bottom + window.scrollY + 20}px`;
+  popup.style.top = `${rect.bottom + window.scrollY + 10}px`;
   popup.style.left = `${rect.left + window.scrollX}px`;
 }
 
 // Function to handle document click
 function handleClick(event: MouseEvent) {
-  const popupContainer = document.querySelector(
-    "#poppy-popup-container"
-  )!;
+  const popupContainer = document.querySelector("#poppy-popup-container")!;
   const popupShadowRoot =
     popupContainer.shadowRoot!.querySelector("#shadow-root");
   const popup = popupShadowRoot!.querySelector<HTMLElement>("#poppy-popup")!;

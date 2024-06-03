@@ -23,7 +23,7 @@ const Question = ({
   };
   return (
     <div
-      className="p-3 cursor-pointer border border-gray-100 min-h-9 w-full font-light rounded-md bg-transparent px-3 py-1 text-sm shadow-sm hover:bg-bbWhite hover:text-bbBlackWhite"
+      className="truncate cursor-pointer border-[0.5px] border-gray-100 min-h-6 w-full font-light rounded-md bg-transparent px-3 py-1 text-sm shadow-sm hover:bg-bbWhite hover:text-bbBlackWhite"
       onClick={() => handleClick(answer)}
     >
       {question}
@@ -36,10 +36,10 @@ const App = () => {
   return (
     <div
       id="poppy-popup"
-      className="absolute hidden p-4 bg-[#09090B] text-bbWhite"
+      className="absolute hidden p-2 bg-[#09090B] text-bbWhite rounded-md z-[999999]"
     >
       {questions.length > 0 ? (
-        <div className="h-[300px] w-[500px] overflow-y-scroll space-y-3">
+        <div className="h-[150px] w-[260px] overflow-y-scroll space-y-2">
           {questions.map((q) => (
             <Question key={q.id} answer={q.answer} question={q.question} />
           ))}

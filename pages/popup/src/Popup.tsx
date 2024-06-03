@@ -10,10 +10,10 @@ const Popup = () => {
 
   return (
     <div className="p-3 text-bbWhite h-[100vh]">
-      <div className="flex justify-between items-center mb-3">
+      <div className="flex justify-between items-center mb-1">
         <div className="flex items-center">
-          <img src="logo.svg" alt="logo" className="w-16" />
-          <h1 className="text-2xl font-bold">QuickFill</h1>
+          <img src="logo.svg" alt="logo" className="w-12" />
+          <h1 className="text-lg font-bold">QuickFill</h1>
         </div>
         <div className="flex gap-3">
           <svg

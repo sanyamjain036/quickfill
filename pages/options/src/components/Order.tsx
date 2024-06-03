@@ -26,15 +26,23 @@ type Question = {
 };
 
 const Card = ({ question }: { question: Question }) => {
-  const { attributes, listeners, setNodeRef, transform, transition } =
-    useSortable({ id: question.id });
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({ id: question.id });
 
-  const style = transform
-    ? {
-        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-        transition,
-      }
-    : undefined;
+  const style = {
+    transform: transform
+      ? `translate3d(${transform.x}px, ${transform.y}px, 0)`
+      : "",
+    transition,
+    backgroundColor: isDragging ? "#EDEDED" : "",
+    color: isDragging ? "#000" : "",
+  };
 
   return (
     <div
@@ -77,7 +85,10 @@ const Order = () => {
       onDragEnd={handleDragEnd}
     >
       <div className="mt-28 px-10">
-        <div ref={containerRef} className="border-bbBlackWhite border-[1px] p-6">
+        <div
+          ref={containerRef}
+          className="border-bbBlackWhite border-[1px] p-6"
+        >
           <SortableContext
             items={questions}
             strategy={verticalListSortingStrategy}
