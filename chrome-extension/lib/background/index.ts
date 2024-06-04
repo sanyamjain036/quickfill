@@ -1,6 +1,6 @@
-import "webextension-polyfill";
+// import "webextension-polyfill";
 
-console.log("background loaded");
-console.log(
-  "Edit 'apps/chrome-extension/lib/background/index.ts' and save to reload."
-);
+// console.log("background loaded");
+// console.log(
+//   "Edit 'apps/chrome-extension/lib/background/index.ts' and save to reload."
+// );

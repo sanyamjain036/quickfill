@@ -23,7 +23,7 @@ const Question = ({
   };
   return (
     <div
-      className="truncate cursor-pointer border-[0.5px] border-gray-100 min-h-6 w-full font-light rounded-md bg-transparent px-3 py-1 text-sm shadow-sm hover:bg-bbWhite hover:text-bbBlackWhite"
+      className="truncate cursor-pointer border-[0.5px] border-gray-100 min-h-[24px] w-full font-light rounded-[6px] bg-transparent px-[12px] py-[4px] text-[14px] shadow-sm hover:bg-bbWhite hover:text-bbBlackWhite"
       onClick={() => handleClick(answer)}
     >
       {question}
@@ -45,7 +45,7 @@ const App = () => {
           ))}
         </div>
       ) : (
-        <div className="text-center">No fields found!</div>
+        <div className="text-center text-[16px]">No fields found!</div>
       )}
     </div>
   );
