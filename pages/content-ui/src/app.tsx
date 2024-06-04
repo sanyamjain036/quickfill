@@ -39,13 +39,15 @@ const App = () => {
       className="absolute hidden p-2 bg-[#09090B] text-bbWhite rounded-md z-[999999]"
     >
       {questions.length > 0 ? (
-        <div className="h-[150px] w-[260px] overflow-y-scroll space-y-2">
+        <div className="h-[150px] w-[220px] overflow-y-scroll space-y-2">
           {questions.map((q) => (
             <Question key={q.id} answer={q.answer} question={q.question} />
           ))}
         </div>
       ) : (
-        <div className="text-center text-[16px]">No fields found!</div>
+        <div className="text-center border-[0.5px] border-gray-100 px-[12px] py-[4px] text-[14px]">
+          No fields added!
+        </div>
       )}
     </div>
   );
